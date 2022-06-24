@@ -2,18 +2,31 @@
     margin:0;
     padding: 0;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
 .game {
     width: 100%;
     height: 100vh;
-    border-bottom: 100px solid rgb(24,174,24);
+    border-bottom: 150px solid transparent;
+    border-top: 75px solid black;
     margin: 0 auto;
     position: relative;
-    overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
+.floor{
+    background: url(../Images/background.png);
+    background-repeat: repeat-x;
+    background-color: black;
+    position: absolute;
+    width: 200vw;
+    height: 150px;
 
+    bottom: 0;
+    left: 100%;
+
+    animation: floor-animation 10s infinite linear; 
+}
 .pipe-game {
     position: absolute;
     bottom: 0;
@@ -36,7 +49,14 @@
     width: 550px;
     animation: clouds-animation 20s infinite linear;
 }
-
+@keyframes floor-animation {
+    from{
+        left: 0;
+    }
+    to{
+       left: -100%;
+    }
+}
 @keyframes pipe-animation {
     from {
         right: -80px;
