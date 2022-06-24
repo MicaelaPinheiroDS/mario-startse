@@ -61,6 +61,10 @@
     top: 10%;
     animation: clouds-animation 30s infinite linear;
 }
+.game-over{
+    animation: mario-dead 5s linear both;
+    animation-delay: 1s;
+}
 @keyframes floor-and-bush-animation {
     from{
         left: 0;
@@ -107,4 +111,12 @@
         bottom: 0%
     }
 
+}
+@keyframes mario-dead{
+    from{
+        bottom: 0;
+    }
+    to{
+        bottom: -100%;
+    }
 }

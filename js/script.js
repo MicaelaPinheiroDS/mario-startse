@@ -18,11 +18,10 @@ const loopGame = setInterval(() => {
   if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
     pipe.style.animation = "none";
     pipe.style.left = `${pipePosition}px`;
-
-    mario.style.animation = "none";
     mario.style.bottom = `${marioPosition}px`;
 
     mario.src = "./Images/mario-game-over.png";
+    mario.classList.add('game-over')
     mario.style.marginLeft = "80px";
 
     clearInterval(loopGame);
