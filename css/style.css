@@ -39,7 +39,16 @@
     z-index: 2;
     bottom: 0;
     width: 80px;
-    animation: pipe-animation 1.5s infinite linear;
+    animation: enemy-animation 1.5s infinite linear;
+}
+.goomba{
+    height: 32px;
+    position: absolute;
+    bottom: 0;
+    right: -35px;
+    z-index: 10;
+    animation: enemy-animation 1.5s infinite linear;
+    animation-delay: 2.5s;
 }
 
 .super-mario{
@@ -73,7 +82,7 @@
        left: -100%;
     }
 }
-@keyframes pipe-animation {
+@keyframes enemy-animation {
     from {
         right: -80px;
     }

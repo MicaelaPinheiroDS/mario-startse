@@ -1,5 +1,6 @@
 const mario = document.querySelector(".super-mario");
 const pipe = document.querySelector(".pipe-game");
+const goomba = document.querySelector(".goomba")
 const stopAnimation =  document.querySelectorAll(".stop-animation")
 
 const jump = () => {
@@ -12,11 +13,12 @@ const jump = () => {
 
 const loopGame = setInterval(() => {
   const pipePosition = pipe.offsetLeft;
+  const goombaPosition = goomba.offsetLeft;
   const marioPosition = +window
     .getComputedStyle(mario)
     .bottom.replace("px", "");
 
-  if (pipePosition <= 120 && pipePosition > 0 && marioPosition < 80) {
+  if ((pipePosition <= 120 && pipePosition > 0 && marioPosition < 117.5) || (goombaPosition <= 120 && goombaPosition > 0 && marioPosition < 117.5)) {
     mario.style.bottom = `${marioPosition}px`;
     mario.src = "./Images/mario-game-over.png";
     mario.classList.add('game-over')
