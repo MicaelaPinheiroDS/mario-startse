@@ -57,8 +57,9 @@
 
 .cloud-game{
     position: absolute;
-    width: 550px;
-    animation: clouds-animation 20s infinite linear;
+    height: 150px;
+    top: 10%;
+    animation: clouds-animation 30s infinite linear;
 }
 @keyframes floor-and-bush-animation {
     from{
@@ -79,10 +80,10 @@
 
 @keyframes clouds-animation {
     from{
-        right: -550px;
+        right: -100%;
     }
     to{
-        right:  100%;
+        right: 100%;
     }
 }
 
