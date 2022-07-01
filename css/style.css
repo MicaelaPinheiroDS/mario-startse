@@ -1,10 +1,15 @@
+:root, button{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 62.5%;
+}
 *{
     margin:0;
     padding: 0;
     box-sizing: border-box;
     overflow: hidden;
-}
+    font-size: 1.6rem;
 
+}
 .game {
     width: 100%;
     height: 100vh;
@@ -13,6 +18,45 @@
     margin: 0 auto;
     position: relative;
     background: linear-gradient(#5c94fc, #4f81df);
+}
+.container, .templateMenu{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.container {
+    visibility: visible;
+    height: 100%;
+    justify-content: center;
+    gap: 4rem;
+}
+.templateMenu{
+    gap: 4rem;
+    background:#cf510c;
+    padding: 4rem;
+    border: solid black .4rem;
+    border-top-color: #fbe3dd;
+    border-left-color: #fbe3dd;
+    border-radius: .4rem;
+}
+.templateMenu h1 {
+    font-size: 4rem;
+    color: #ffc3b8;
+    font-weight: bold;
+    text-shadow: .1rem .5rem  black;
+}
+.templateMenu h1:first-child span{
+    font-size: 3rem;
+    padding-bottom: 2rem;
+    display: block;
+}
+.menuButton ul li{
+    color: white;
+    font-size: 2rem;
+}
+.menuButton ul li:hover{
+    cursor: pointer;
+    list-style-type: "\1F44D";
 }
 .background-bush{
     height: 90px;
@@ -28,11 +72,9 @@
     position: absolute;
     width: 200vw;
     height: 150px;
-
     bottom: 0;
-    left: 100%;
-
     animation: floor-and-bush-animation 10s infinite linear; 
+
 }
 .pipe-game {
     position: absolute;
@@ -49,6 +91,7 @@
     z-index: 10;
     animation: enemy-animation 1.5s infinite linear;
     animation-delay: 2.5s;
+    justify-content: space-between;
 }
 
 .super-mario{
