@@ -31,7 +31,7 @@ function createMenu(){
 createMenu()
 starGame.addEventListener('click', ()=>{
     document.querySelector('.container').style.display = 'none'
-    mario.src = '../Images/super-mario.gif'
+    mario.src = './Images/super-mario.gif'
     pipe.style.display = ""
     for(let i in stopAnimation){
         if(typeof(stopAnimation[i]) == 'object'){
